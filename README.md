@@ -30,7 +30,7 @@ In this design, we define an intermediate signal **X** as the XOR of inputs **A*
 With **X** defined, the expressions for **Sum** and **Carry-out** (`Cout`) are:
 
 - **Sum**: `Sum = X ⊕ Cin`
-- **Carry-out**: `Cout = (A ⋅ X') + (H ⋅ C)`
+- **Carry-out**: `Cout = (A ⋅ X') + (X ⋅ C)`
 
 ### Explanation
 - `X = A ⊕ B`: This represents the XOR operation of **A** and **B**.
