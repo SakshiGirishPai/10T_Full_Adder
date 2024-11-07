@@ -44,5 +44,63 @@ Here:
 ## Block Diagram
 ![Full Adder](https://images.javatpoint.com/tutorial/digital-electronics/images/full-adder.png)
 
+## Implementation
+XOR Circuit ![image](https://github.com/user-attachments/assets/a527c8b6-1559-4632-a501-5a41dd5fab88)
+## Circuit diagram of Full Adder
+![image](https://github.com/user-attachments/assets/28e31888-9e5e-4e40-9b2b-855675e3a203)
+## Performance Parameters
 
+| Parameter            | Description                                                                                                     | Min | Average | Max | Unit | Condition             |
+|----------------------|-----------------------------------------------------------------------------------------------------------------|-----|---------|-----|------|-----------------------|
+| Technology Used      | SkyWater 130nm                                                                                                 | -   | -       | -   | -    | -                     |
+| VCC                  | Supply Voltage                                                                                                 | -   | 1.80    | -   | V    | T=-40°C to 125°C     |
+| tpHL                 | Propagation Delay High to Low: Delay from input 50% rise to output 50% fall (high-to-low transition)           |     |         |     |      |                       |
+| tpLH                 | Propagation Delay Low to High: Delay from input 50% fall to output 50% rise (low-to-high transition)           |     |         |     |      |                       |
+| tr                   | Rise time: Time taken for the output to go from 10% to 90% of its final high value                            |     |         |     |      |                       |
+| tf                   | Fall Time: Time taken for the output signal to drop from 90% of its high level (VCC) to 10% of its high level |     |         |     |      |                       |
+| Vth                  | Threshold Voltage: The minimum gate-to-source voltage (Vgs) required to create a conducting path in MOSFET    |     |         |     |      |                       |
+| Cin                  | Input Capacitance: Capacitance seen at each input of the Full Adder                                             |     |         |     |      |                       |
+| Voh                  | Output high voltage                                                                                           |     |         |     |      |                       |
+| Vol                  | Output low voltage                                                                                            |     |         |     |      |                       |
+
+
+## Schematic Performance Characteristics
+- Plot of input(a,b,cin) vs output(sum,cout)
+![image](https://github.com/user-attachments/assets/3f439f41-25a5-43b7-805d-4efd2871a7ed)
+
+## EDA Tools Used & Their Installation
+
+To construct the schematic, I have used **Xschem** and simulated the circuit using **ngspice**. I followed the steps given in [Mr. Rajdeep Mazumder's repository](https://github.com/rajdeep66/edaBundle_whyRD).
+
+### Installation Steps
+
+1. **Install Git**
+   Open your terminal and install Git if it is not already installed.
+
+2. **Create a Directory**
+   Make a new directory on your Desktop with a name of your choice:
+
+   ```bash
+   $ mkdir <name_of_your_choice>
+   $ git clone "https://github.com/rajdeep66/edaBundle_whyRD.git"
+   $ cd edaBundle_whyRD/
+   $ gedit auto.sh
+# Paste the copied content into the file and save it.
+  ```bash
+   $ chmod +x auto.sh
+$ ./auto.sh
+$ sudo apt update
+$ sudo apt -y install yosys
+$ cd ~/whyRD_eda_bundle/
+$ git clone git://opencircuitdesign.com/open_pdks
+$ cd open_pdks
+$ ./configure --enable-sky130-pdk
+$ sudo make
+$ sudo make install
+$ cd ..
+$ sudo ln -s /usr/local/share/pdk/sky130A/libs.tech/magic/* /usr/local/lib/magic/sys
+ $ git clone "https://github.com/SakshiGirishPai/10T_Full_Adder"
+   ```
+
+This Markdown file is formatted for GitHub and provides a clear set of installation steps, including the commands in code blocks. Let me know if you'd like any further modifications!
 
