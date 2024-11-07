@@ -104,3 +104,16 @@ $ sudo ln -s /usr/local/share/pdk/sky130A/libs.tech/magic/* /usr/local/lib/magic
 
 This Markdown file is formatted for GitHub and provides a clear set of installation steps, including the commands in code blocks. Let me know if you'd like any further modifications!
 
+## Acknowledgments
+
+- **Kunal Ghosh** - Director, VSD Corp. Pvt. Ltd.
+
+## Contact Information
+
+- **Sakshi Pai** - Undergraduate Student, KLE Technological  University  
+  Email: [sakshipai3008@gmail.com](mailto:sakshipai3008@gmail.com)
+
+- **Kunal Ghosh** - Director, VSD Corp. Pvt. Ltd.  
+  Email: [kunalghosh@gmail.com](mailto:kunalghosh@gmail.com)
+
+
