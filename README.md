@@ -54,19 +54,38 @@ XOR Circuit ![image](https://github.com/user-attachments/assets/a527c8b6-1559-46
 |----------------------|-----------------------------------------------------------------------------------------------------------------|-----|---------|-----|------|-----------------------|
 | Technology Used      | SkyWater 130nm                                                                                                 | -   | -       | -   | -    | -                     |
 | VCC                  | Supply Voltage                                                                                                 | -   | 1.80    | -   | V    | T=-40°C to 125°C     |
-| tpHL                 | Propagation Delay High to Low: Delay from input 50% rise to output 50% fall (high-to-low transition)           |     |         |     |      |                       |
-| tpLH                 | Propagation Delay Low to High: Delay from input 50% fall to output 50% rise (low-to-high transition)           |     |         |     |      |                       |
-| tr                   | Rise time: Time taken for the output to go from 10% to 90% of its final high value                            |     |         |     |      |                       |
-| tf                   | Fall Time: Time taken for the output signal to drop from 90% of its high level (VCC) to 10% of its high level |     |         |     |      |                       |
-| Vth                  | Threshold Voltage: The minimum gate-to-source voltage (Vgs) required to create a conducting path in MOSFET    |     |         |     |      |                       |
-| Cin                  | Input Capacitance: Capacitance seen at each input of the Full Adder                                             |     |         |     |      |                       |
-| Voh                  | Output high voltage                                                                                           |     |         |     |      |                       |
-| Vol                  | Output low voltage                                                                                            |     |         |     |      |                       |
+| tpHL                 | Propagation Delay High to Low: Delay from input 50% rise to output 50% fall (high-to-low transition)          | 4.416|    4.423     |4.43     |   ns   |    T=-40°C to 125°C  |
+| tpLH                 | Propagation Delay Low to High: Delay from input 50% fall to output 50% rise (low-to-high transition)           | 0.31    |  0.33       |0.35     |   ns   |  T=-40°C to 125°C |
+| tr                   | Rise time: Time taken for the output to go from 10% to 90% of its final high value                            |0.111     | 0.61        |0.21     | ns     |  T=-40°C to 125°C|
+| tf                   | Fall Time: Time taken for the output signal to drop from 90% of its high level (VCC) to 10% of its high level |0.086     | 0.087        | 0.089    |    ns  |    T=-40°C to 125°C  |
+| Vth                  | Threshold Voltage: The minimum gate-to-source voltage (Vgs) required to create a conducting path in MOSFET    |  -   | 0.3        | -    | V     | T=-40°C to 125°C  |
+| Cin                     | Output high voltage                                                                                           | 1.0147    | 1.432  | 1.85  | V |  T=-40°C to 125°C |
+| Vol                  | Output low voltage                                                                                            |-0.02     |  0.4575       |0.935     |  V    |  T=-40°C to 125°C  |
 
 
 ## Schematic Performance Characteristics
 - Plot of input(a,b,cin) vs output(sum,cout)
 ![image](https://github.com/user-attachments/assets/3f439f41-25a5-43b7-805d-4efd2871a7ed)
+## Future Optimization
+
+While the current design is functional, there are several areas for future improvement:
+
+### 1. **Speed and Power Efficiency**
+   - **Optimize Propagation Delay**: Adjust transistor W/L ratios to improve speed.
+   - **Lower Power Consumption**: Use low-power logic gates and optimize for 1.8V operation.
+
+### 2. **Area and Layout Optimization**
+   - **Reduce Layout Area**: Simplify the design and minimize transistor count to save area.
+   - **Check Performance via Layout**: Evaluate the circuit's real-world performance by generating its layout, checking parasitic capacitance, and validating timing.
+
+### 3. **Scalability and Reliability**
+   - **Multi-Bit Design**: Extend the design for multi-bit operations to increase throughput.
+   - **Improve Robustness**: Ensure reliable operation under different voltage, temperature, and process variations.
+
+### 4. **Integration with AI/ML**
+   - **AI/ML Integration**: Enhance the circuit’s role in larger AI/ML models by optimizing it for low-latency computation.
+
+These optimizations will enhance speed, power efficiency, scalability, and reliability, with layout checks helping to validate design performance.
 
 ## EDA Tools Used & Their Installation
 
@@ -107,7 +126,7 @@ This Markdown file is formatted for GitHub and provides a clear set of installat
 ## Acknowledgments
 
 - **Kunal Ghosh** - Director, VSD Corp. Pvt. Ltd.
-
+-  *Rajdeep Mazumder*-Physical Design Engineer, Intel Corporation.
 ## Contact Information
 
 - **Sakshi Pai** - Undergraduate Student, KLE Technological  University  
